@@ -5,6 +5,5 @@ install:
   - npm ci
 script:
   - echo "hello World"
-  - git branch
-  - pwd
-  - npx lerna publish
+  - git checkout master
+  - npx lerna publish --yes
