@@ -6,4 +6,6 @@ install:
 script:
   - echo "hello World"
   - git checkout master
-  - npx lerna publish from-git --yes
+  - git config --list
+  - npm whoami
+  - npx lerna publish --yes
