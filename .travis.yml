@@ -3,9 +3,12 @@ node_js:
   - '12'
 install:
   - npm ci
+before_script:
+  - git config --global user.email ${GITHUB_EMAIL}
+  - git config --global user.name ${GITHUB_USER}
+  - git remote set-url origin "https://${GITHUB_TOKEN}@github.com/raduachim/i-try-lerna.git" > /dev/null 2>&1
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
 script:
   - echo "hello World"
   - git checkout master
-  - git config --list
-  - npm whoami
   - npx lerna publish --yes
