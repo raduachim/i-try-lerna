@@ -11,5 +11,5 @@ install:
 script:
   - echo "hello World"
   - git checkout master
-  - npx lerna version
+  - npx lerna version --yes
   # - npx lerna publish --yes
