@@ -5,4 +5,6 @@ install:
   - npm ci
 script:
   - echo "hello World"
-  - npx lerna publish --yes
+  - git branch
+  - pwd
+  - npx lerna publish
