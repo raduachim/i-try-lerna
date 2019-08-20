@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - '12'
+install:
+  - npm ci
+script:
+  - echo "hello World"
+  - npx lerna publish --yes
